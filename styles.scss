@@ -1,0 +1,270 @@
+body {
+	background:rgba(255,254,250,.90);
+	font:500 0.8rem 'Roboto', arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+
+input:hover,
+input:focus {
+	box-shadow: 0 0 1px gray;
+}
+
+
+/* Top right menu, return button to main page */
+.menu-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	background: transparent;
+	float: right;
+	
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+		
+	.menu-item {
+		padding: 1rem;
+		color: black;  
+		text-decoration:none;
+	}
+	
+	.menu-item:hover {
+		background-color: #555556;
+		color: white;
+	}
+	.menu-item:active {
+		background-color: lightblue;
+		color: darkblue;
+		border-bottom: solid 1px black;
+	}
+	
+}
+
+
+
+/* Main block, general search area */
+.wrapper-search {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 0.2rem;
+	grid-auto-rows: minmax(5rem, auto);
+	clear: both;
+    overflow: hidden;
+    white-space: nowrap;
+	
+	.one {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255,255,250,0.1);
+		grid-column: 2 / 3;
+		grid-row: 3;
+		
+		
+	}
+	.two {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255,255,250,0.1);
+		grid-column: 2 / 3;
+		grid-row: 4;
+		
+		.search-input {
+			background-color: transparant;
+			background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20focusable%3D%22false%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%09%3Cpath%20d%3D%22M15.5%2014h-.79l-.28-.27A6.471%206.471%200%200%200%2016%209.5%206.5%206.5%200%201%200%209.5%2016c1.61%200%203.09-.59%204.23-1.57l.27.28v.79l5%204.99L20.49%2019l-4.99-5zm-6%200C7.01%2014%205%2011.99%205%209.5S7.01%205%209.5%205%2014%207.01%2014%209.5%2011.99%2014%209.5%2014z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E");
+			background-repeat: no-repeat;
+			background-position: left 0.2rem center;
+			border-radius: 1.2rem;
+			border: solid thin lightgray; 
+			padding: 1rem 1rem 1rem 2rem; /* top | right | bottom | left */
+			width: 50vh;
+		}
+	}
+	.three {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255,255,250,0.1);
+		grid-column: 2 / 3;
+		grid-row: 5;
+		
+		.search-submit,
+		.search-lucky {
+			background-color: #F9F9F9; /* Light gray */
+			color: #2F2E2E; /* dark gray */
+			font-size: 1rem;
+			cursor: pointer;
+			border: none;
+			border-radius: 0.4rem;
+			margin: 1rem;
+			padding: 1rem;
+			
+		}
+	}
+}
+
+
+/* Main block, image search area */
+.wrapper-image-search {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-auto-rows: minmax(5rem, auto);
+	clear: both;
+    overflow: hidden;
+    white-space: nowrap;
+	
+	.one {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255,255,250,0.1);
+		grid-row: 3;
+		z-index: 1;
+		
+		/* gis.html with Google loge */
+		> .images-word {
+			color: steelblue;
+			position: relative;
+			top: 2rem;
+			right: 3.8rem;
+		}
+	}
+	.two {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255,255,250,0.1);
+		grid-row: 4;
+		
+		.search-input {
+			background-color: transparant;
+			background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20focusable%3D%22false%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%09%3Cpath%20d%3D%22M15.5%2014h-.79l-.28-.27A6.471%206.471%200%200%200%2016%209.5%206.5%206.5%200%201%200%209.5%2016c1.61%200%203.09-.59%204.23-1.57l.27.28v.79l5%204.99L20.49%2019l-4.99-5zm-6%200C7.01%2014%205%2011.99%205%209.5S7.01%205%209.5%205%2014%207.01%2014%209.5%2011.99%2014%209.5%2014z%22%3E%3C%2Fpath%3E%0A%3C%2Fsvg%3E");
+			background-repeat: no-repeat;
+			background-position: left 0.2rem center;
+			border-radius: 1.2rem;
+			border: solid thin lightgray; 
+			padding: 1rem 1rem 1rem 2rem; /* top | right | bottom | left */
+			width: 50vh;
+		}
+	}
+	.three {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255,255,250,0.1);
+		grid-row: 5;
+		
+		.search-submit,
+		.search-lucky {
+			background-color: #F9F9F9; /* Light gray */
+			color: #2F2E2E; /* dark gray */
+			font-size: 1rem;
+			cursor: pointer;
+			border: none;
+			border-radius: 0.4rem;
+			margin: 1rem;
+			padding: 1rem;
+			
+		}
+	}
+}
+
+/* Main block, advanced search area */
+
+.google-logo-top-left > img {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	width: 4%;
+	height: auto;
+}
+
+h3.header-advanced {
+	margin-left: 2rem;
+	color: #CC0000;
+	font-size: 1.35rem;
+	font-weight: 400;
+}
+
+.line-hor {
+	border-bottom: solid thin darkgray;
+	margin-bottom: 3rem;
+}
+
+.subtitle-advanced {
+	margin-left: 2rem;
+	margin-bottom: 1rem;
+	color: #444444;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.wrapper-advanced-search {
+	padding: 3.75%;
+	display: grid;
+	grid-template-columns: minmax(200px, 200px) 1fr 1fr;
+	column-gap: 1.5rem;
+	grid-column-gap: 1.5rem;
+	row-gap: 1rem;
+	grid-row-gap: 1rem; /* row gap not working at any time during development */
+	
+	clear: both;
+    overflow: hidden;
+    white-space: nowrap;
+
+	div.column-one {
+		background-color: rgba(0,255,255,0);
+		font-size: 1rem;
+	}
+	
+	div.column-two {
+		background-color: rgba(255,255,0,0);
+		
+		.input-text-advanced {
+			width: 100%;
+			height: 90%;
+			
+		}
+		.input-submit-advanced {
+			background-color: #2986CC;
+			color: white;
+			font-weight: 800;
+			float: right;
+			height: 30px;
+		}	
+	}
+	
+	div.column-three {
+		background-color: rgba(255,0,255,0);
+	}
+	
+	.row {
+			font-size: small;
+			font-weight: lighter;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			vertical-align: middle;
+			height: 30px;
+		}
+}
+
+@media screen and (max-width: 1024px) {
+	.wrapper-advanced-search {
+		grid-template-columns: 150px 2fr;
+		
+		div.column-three {
+			display: none;
+		}
+		
+	}
+}
+
+
